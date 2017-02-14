@@ -15,7 +15,7 @@ const ContextReplacementPlugin = require('webpack/lib/ContextReplacementPlugin')
 const CommonsChunkPlugin = require('webpack/lib/optimize/CommonsChunkPlugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const CheckerPlugin = require('awesome-typescript-loader').CheckerPlugin;
-const HtmlElementsPlugin = require('./html-elements-plugin');
+//const HtmlElementsPlugin = require('./html-elements-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
@@ -27,7 +27,7 @@ const ngcWebpack = require('ngc-webpack');
 const HMR = helpers.hasProcessFlag('hot');
 const AOT = helpers.hasNpmFlag('aot');
 const METADATA = {
-  title: 'Angular2 Webpack Starter by @gdi2290 from @AngularClass',
+  title: 'Angular 2 starter',
   baseUrl: '/',
   isDevServer: helpers.isWebpackDevServer()
 };
@@ -265,7 +265,7 @@ module.exports = function (options) {
        * See: https://www.npmjs.com/package/copy-webpack-plugin
        */
       new CopyWebpackPlugin([
-        { from: 'src/assets', to: 'assets' },
+        //{ from: 'src/assets', to: 'assets' },
         { from: 'src/meta'}
       ]),
 
@@ -318,10 +318,10 @@ module.exports = function (options) {
        *  <%= webpackConfig.htmlElements.headTags %>
        *
        * Dependencies: HtmlWebpackPlugin
-       */
-      new HtmlElementsPlugin({
-        headTags: require('./head-config.common')
-      }),
+       * new HtmlElementsPlugin({
+       * headTags: require('./head-config.common')
+       * }),
+       */     
 
       /**
        * Plugin LoaderOptionsPlugin (experimental)
