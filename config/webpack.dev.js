@@ -1,4 +1,4 @@
-/**
+﻿/**
  * @author: @AngularClass
  */
 
@@ -86,7 +86,7 @@ module.exports = function (options) {
       chunkFilename: '[id].chunk.js',
 
       library: 'ac_[name]',
-      libraryTarget: 'var',
+      libraryTarget: 'var'
     },
 
     module: {
@@ -125,7 +125,7 @@ module.exports = function (options) {
           test: /\.scss$/,
           use: ['style-loader', 'css-loader', 'sass-loader'],
           include: [helpers.root('src', 'styles')]
-        },
+        }
 
       ]
 
@@ -149,7 +149,7 @@ module.exports = function (options) {
         'process.env': {
           'ENV': JSON.stringify(METADATA.ENV),
           'NODE_ENV': JSON.stringify(METADATA.ENV),
-          'HMR': METADATA.HMR,
+          'HMR': METADATA.HMR
         }
       }),
 
@@ -164,7 +164,7 @@ module.exports = function (options) {
             {
               name: 'zone.js',
               path: 'zone.js/dist/long-stack-trace-zone.js'
-            },
+            }
           ],
           vendor: [
             '@angular/platform-browser',
@@ -175,7 +175,7 @@ module.exports = function (options) {
             '@angular/http',
             '@angular/router',
             '@angularclass/hmr',
-            'rxjs',
+            'rxjs'
           ]
         },
         dllDir: helpers.root('dll'),
@@ -216,7 +216,7 @@ module.exports = function (options) {
         options: {
 
         }
-      }),
+      })
 
     ],
 
@@ -254,4 +254,4 @@ module.exports = function (options) {
     }
 
   });
-}
+};

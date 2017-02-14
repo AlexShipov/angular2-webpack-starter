@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+﻿import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import {
@@ -22,6 +22,9 @@ import { ENV_PROVIDERS } from './environment';
 //import { ROUTES } from './app.routes';
 // App is our top level component
 import { AppComponent } from './app.component';
+import { HeroDetailComponent } from './hero-detail.component';
+
+
 //import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { NoContentComponent } from './no-content';
@@ -47,7 +50,8 @@ type StoreType = {
   bootstrap: [ AppComponent ],
   declarations: [
     AppComponent,
-    NoContentComponent
+      NoContentComponent,
+      HeroDetailComponent
   ],
   imports: [ // import Angular's modules
     BrowserModule,
