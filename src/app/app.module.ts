@@ -11,7 +11,7 @@ import {
     createInputTransfer
 } from '@angularclass/hmr';
 import {
-    RouterModule,
+    //RouterModule,
     PreloadAllModules
 } from '@angular/router';
 
@@ -25,7 +25,9 @@ import { AppComponent } from './app.component';
 import { HeroDetailComponent } from './hero-detail.component';
 import { HeroesComponent } from './heroes.component';
 import { HeroService } from './hero.service';
+import { DashboardComponent } from './dashboard.component';
 
+import { AppRoutingModule } from './app-routing.module';
 
 //import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
@@ -54,17 +56,13 @@ type StoreType = {
         AppComponent,
         NoContentComponent,
         HeroDetailComponent,
-        HeroesComponent
+        HeroesComponent,
+        DashboardComponent
     ],
     imports: [ // import Angular's modules
         BrowserModule,
         FormsModule,
-        RouterModule.forRoot([
-            {
-                path: 'heroes',
-                component: HeroesComponent
-            }
-        ])
+        AppRoutingModule
         //RouterModule.forRoot(ROUTES, { useHash: true, preloadingStrategy: PreloadAllModules })
     ],
     providers: [ // expose our Services and Providers into Angular's dependency injection
